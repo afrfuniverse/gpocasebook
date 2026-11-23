@@ -1,0 +1,73 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Domain scan · GPOCasebook" Width="1110" Height="714" MinWidth="780" MinHeight="570"
+        WindowStartupLocation="CenterOwner" Background="#0C121C" Foreground="#E9EFF8"
+        FontFamily="Segoe UI" FontSize="13" UseLayoutRounding="True" SnapsToDevicePixels="True">
+    <Grid Margin="22,17,22,15" TextOptions.TextFormattingMode="Display">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DockPanel Margin="0,0,0,16">
+            <Button x:Name="Account" DockPanel.Dock="Right" Content="Use another Windows account" VerticalAlignment="Top"/>
+            <StackPanel Margin="0,0,12,0">
+                <TextBlock Text="Domain scan" FontSize="26" FontWeight="SemiBold"/>
+                <TextBlock Text="Find computers in Active Directory and collect Group Policy evidence." Margin="0,5,0,0" Foreground="#9DB0C6" TextWrapping="Wrap"/>
+            </StackPanel>
+        </DockPanel>
+        <Border Grid.Row="1" Background="#121D2B" BorderBrush="#27384C" BorderThickness="1" CornerRadius="6" Padding="12" Margin="0,0,0,12">
+            <DockPanel>
+                <Button x:Name="Find" DockPanel.Dock="Right" Content="Find computers" VerticalAlignment="Bottom" Margin="10,0,0,0"/>
+                <StackPanel>
+                    <TextBlock Text="Active Directory domain DNS name" Foreground="#9DB0C6" Margin="0,0,0,4"/>
+                    <TextBox x:Name="DomainName" MaxLength="253" AutomationProperties.Name="Active Directory domain DNS name"
+                             ToolTip="Leave blank to use the current Windows domain."/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+        <DockPanel Grid.Row="2" LastChildFill="True" Margin="0,0,0,9">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                <Button x:Name="SelectAll" Content="Select all shown" Margin="8,0,6,0"/>
+                <Button x:Name="Clear" Content="Clear selection"/>
+            </StackPanel>
+            <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center" Text="Filter computers" Foreground="#9DB0C6" Margin="0,0,8,0"/>
+            <TextBox x:Name="Filter" AutomationProperties.Name="Filter computers"/>
+        </DockPanel>
+        <Border Grid.Row="3" BorderBrush="#27384C" BorderThickness="1" Background="#121D2B" CornerRadius="6">
+            <DataGrid x:Name="Computers" IsReadOnly="True" EnableRowVirtualization="True"
+                      AutomationProperties.Name="Discovered domain computers">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Scan" Width="63">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Included,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                          HorizontalAlignment="Center" VerticalAlignment="Center"
+                                          IsEnabled="{Binding CanSelect}"
+                                          AutomationProperties.Name="{Binding Computer}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Computer" Binding="{Binding Computer}" Width="2*" MinWidth="170"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Reading.Status}" Width="112"/>
+                    <DataGridTextColumn Header="Events" Binding="{Binding Reading.Events}" Width="65"/>
+                    <DataGridTextColumn Header="RSoP" Binding="{Binding Reading.Policies}" Width="60"/>
+                    <DataGridTextColumn Header="Details" Binding="{Binding Reading.Detail}" Width="3*" MinWidth="152"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        <Border Grid.Row="4" Margin="0,8,0,10" Background="#101A28" CornerRadius="5" Padding="11,8">
+            <TextBlock x:Name="SelectedDetails" Foreground="#9DB0C6" MaxHeight="72" TextWrapping="Wrap"/>
+        </Border>
+        <DockPanel Grid.Row="5" LastChildFill="True">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                <Button x:Name="Reports" Content="Scan reports" Margin="0,0,6,0"/>
+                <Button x:Name="Stop" Content="Cancel" Margin="0,0,6,0"/>
+                <Button x:Name="Start" Content="Scan selected" Style="{DynamicResource PrimaryButton}"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="Status" TextWrapping="Wrap" Foreground="#E9EFF8"/>
+                <TextBlock x:Name="Counts" TextWrapping="Wrap" Foreground="#9DB0C6" Margin="0,4,0,0"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>

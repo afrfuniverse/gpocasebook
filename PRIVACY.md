@@ -1,24 +1,34 @@
-# GPOCasebook Privacy Policy
+# GPOCasebook privacy policy
 
-Effective November 23, 2026  
-Publisher: Alireza Foroughifar
+Effective November 23, 2026.
 
-GPOCasebook is a Windows desktop tool for diagnosing Group Policy. The app does not require an account and does not send diagnostic evidence to the publisher. It does not include advertising or publisher-operated analytics.
+GPOCasebook is a Windows desktop application published by Alireza Foroughifar. It helps you investigate Windows Group Policy by reading evidence you select or are authorized to access. This policy describes the information the app handles during normal use.
 
-## What the app processes
+## Information the app can handle
 
-- **Local collection and imports.** When you start a capture or choose a file, GPOCasebook reads Windows event logs and Resultant Set of Policy (RSoP) data. Records may contain computer and domain names, Windows account names, policy names, timestamps, system paths and event details.
-- **Optional domain collection.** If you choose Domain scan, the app sends authenticated directory, event-log and RSoP queries to the Active Directory infrastructure and computers you select. Requests use your Windows permissions. If you choose an alternate account, the Windows credential prompt handles the password. GPOCasebook does not store that password.
-- **Archives and exports.** Evidence saved to the archive is stored under your Windows profile. Exports are written to the location you choose. The default shareable HTML report omits named computers, named policies and raw event fields. Detailed reports and domain summaries can contain internal data. Review every report before sharing it.
+Depending on the actions you choose, evidence can include:
 
-## Retention and control
+- computer, domain, and Windows user names present in logs
+- Group Policy event messages, record numbers, channels, timestamps, Activity IDs, and policy names
+- file paths and reported Group Policy or RSoP results
+- the contents of event XML, EVTX exports, and gpresult /x XML files you import
 
-The publisher does not receive these records from routine app use. Archived or exported records remain available until you remove them or your device removes them. Use **Open archive folder** in the app to locate saved captures. Delete exported reports from their chosen destination when you no longer need them.
+## Collection and storage
 
-## Support and third-party services
+- **Local collection** reads Group Policy event channels on the current computer and requests an RSoP report through the Windows gpresult tool.
+- **Imports** read only files you select.
+- **Domain scans** use authenticated Windows directory, Event Log, and Computer RSoP queries against the domain and computers you select.
+- **Alternate credentials** are handled by the Windows Run as prompt. GPOCasebook does not receive or store the password entered for that Windows logon session.
+- Captures, archives, scan summaries, and exported reports are stored under your Windows profile or at the destination you choose.
 
-If you open the project link or voluntarily post a support issue on GitHub, GitHub handles that interaction. GitHub issues are public. Share redacted information only. Microsoft may separately process Store downloads or account activity under its own policies.
+The app does not require an account and sends no publisher telemetry during routine use. Windows and Microsoft services may process data according to their own settings when you use them.
+
+## Sharing
+
+The default shareable HTML report omits named computers, named policies, and raw event fields. Detailed reports, domain scan summaries, archive files, and imported evidence can contain internal troubleshooting data. Review every file before sending it to another person or attaching it to a public issue.
+
+You control access to local archives and can delete archive files or exports. GPOCasebook does not edit Group Policy, install a background service, or store Windows passwords.
 
 ## Contact
 
-For privacy questions, contact the publisher through the [official GPOCasebook support page](https://github.com/afrfuniverse/gpocasebook/issues).
+For privacy questions or support, open an issue at [github.com/afrfuniverse/gpocasebook/issues](https://github.com/afrfuniverse/gpocasebook/issues). Do not include confidential logs or credentials in a public issue.

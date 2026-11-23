@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Events>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>4004</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:55:12.100Z" />
+      <EventRecordID>3101</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000003}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData></EventData>
+    <RenderingInfo Culture="en-US"><Message>Manual processing of computer policy started.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>4016</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:55:12.520Z" />
+      <EventRecordID>3102</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000003}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData>
+      <Data Name="CSEExtensionName">Registry</Data>
+    </EventData>
+    <RenderingInfo Culture="en-US"><Message>Windows started processing the Registry client-side extension.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>5016</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:55:12.993Z" />
+      <EventRecordID>3103</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000003}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData>
+      <Data Name="CSEExtensionName">Registry</Data>
+      <Data Name="ErrorCode">0</Data>
+    </EventData>
+    <RenderingInfo Culture="en-US"><Message>The Registry client-side extension completed.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>8004</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:55:13.183Z" />
+      <EventRecordID>3104</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000003}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData></EventData>
+    <RenderingInfo Culture="en-US"><Message>Manual processing of computer policy completed.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>4005</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:55:13.350Z" />
+      <EventRecordID>3105</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000004}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData></EventData>
+    <RenderingInfo Culture="en-US"><Message>Manual processing of user policy started.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>8005</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:55:14.090Z" />
+      <EventRecordID>3106</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000004}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData></EventData>
+    <RenderingInfo Culture="en-US"><Message>Manual processing of user policy completed.</Message></RenderingInfo>
+  </Event>
+</Events>

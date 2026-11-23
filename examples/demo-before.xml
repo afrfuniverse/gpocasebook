@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Events>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>4004</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:42:18.000Z" />
+      <EventRecordID>3001</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000001}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData></EventData>
+    <RenderingInfo Culture="en-US"><Message>Manual processing of computer policy started.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>5312</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:42:18.120Z" />
+      <EventRecordID>3002</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000001}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData></EventData>
+    <RenderingInfo Culture="en-US"><Message>The applicable list includes Local Group Policy.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>4016</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:42:18.352Z" />
+      <EventRecordID>3003</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000001}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData>
+      <Data Name="CSEExtensionName">Registry</Data>
+    </EventData>
+    <RenderingInfo Culture="en-US"><Message>Windows started processing the Registry client-side extension.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>1096</EventID><Level>2</Level>
+      <TimeCreated SystemTime="2026-11-21T07:42:19.082Z" />
+      <EventRecordID>3004</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000001}" />
+      <Channel>System</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData>
+      <Data Name="GPOCNName">LocalGPO</Data>
+      <Data Name="FilePath">C:\Windows\System32\GroupPolicy\Machine\Registry.pol</Data>
+      <Data Name="ErrorCode">13</Data>
+      <Data Name="ErrorDescription">The data is invalid.</Data>
+    </EventData>
+    <RenderingInfo Culture="en-US"><Message>Windows could not apply the registry-based settings for LocalGPO.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>7016</EventID><Level>2</Level>
+      <TimeCreated SystemTime="2026-11-21T07:42:19.180Z" />
+      <EventRecordID>3005</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000001}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData>
+      <Data Name="CSEExtensionName">Registry</Data>
+      <Data Name="ErrorCode">13</Data>
+    </EventData>
+    <RenderingInfo Culture="en-US"><Message>Registry extension processing returned an error.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>4005</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:42:20.000Z" />
+      <EventRecordID>3006</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000002}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData></EventData>
+    <RenderingInfo Culture="en-US"><Message>Manual processing of user policy started.</Message></RenderingInfo>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-GroupPolicy" />
+      <EventID>8005</EventID><Level>4</Level>
+      <TimeCreated SystemTime="2026-11-21T07:42:20.865Z" />
+      <EventRecordID>3007</EventRecordID>
+      <Correlation ActivityID="{310f8a5c-ef51-4abd-8f7c-000000000002}" />
+      <Channel>Microsoft-Windows-GroupPolicy/Operational</Channel><Computer>LAB-WIN11</Computer>
+    </System>
+    <EventData></EventData>
+    <RenderingInfo Culture="en-US"><Message>Manual processing of user policy completed.</Message></RenderingInfo>
+  </Event>
+</Events>

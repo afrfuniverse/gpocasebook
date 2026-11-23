@@ -1,0 +1,20 @@
+Review this computer
+1. Select Collect this PC to read the last 24 hours of Group Policy events and the current RSoP snapshot.
+2. In Timeline, select a processing run and an event. Event evidence shows the time, channel, error fields and Windows message when available.
+3. Open Resultant policies to see the settings reported by RSoP. An unavailable source appears as a collection note.
+
+Import another computer's evidence
+Select Import files and choose EVTX exports or Windows event XML. You can also add a gpresult /x XML report. Give the capture a name and select Open capture.
+
+Save, compare and export
+Use Save to archive to keep a capture. Find saved captures by name, computer or date. In Compare, choose the earlier and later capture. Review the latest User and Computer outcomes and the RSoP observations. Export HTML saves a shareable summary by default. Choose Include original messages, paths and policy names for an internal report.
+
+Scan computers in a domain
+1. Select Domain scan. Use the current Windows account or select Use another Windows account and enter the password in the Windows Run as prompt.
+2. Enter the domain DNS name, or leave it blank to use the current domain. Select Find computers. The list contains enabled AD computer objects with usable DNS names.
+3. Select individual computers, or use Select all shown with the filter cleared for all discovered computers. Select Scan selected to review the scope and start.
+4. Review each computer's status. Each scan reads Group Policy events from the last 24 hours and requests the Computer RSoP snapshot. Accounts need permission to read each of those sources on the target computers. Windows connectivity and remote management rules also apply.
+5. Reopen saved captures from Archive. Open Scan reports for the internal HTML summaries. Refresh archive updates the list after a scan in another window.
+
+Archive location
+Choose Open archive folder to view and back up the current archive. The classic installer uses %LOCALAPPDATA%\GPOCasebook\Archive. The Microsoft Store edition uses the app package's LocalState\Archive directory. Copy archived files to the Store archive to bring them over from the classic edition. Back up the Store archive before uninstalling. Scan summaries include computer names and collection status.

@@ -1,0 +1,21 @@
+GPOCasebook is a Windows 11 x64 desktop app for viewing Group Policy evidence.
+
+Launch GPOCasebook from Start. The app opens to an empty workbench. Help describes
+the features and About shows the release version and MIT license. No GPOCasebook
+account is required.
+
+To review a capture without an Active Directory test environment, select
+Import files and open examples/demo-before.xml from the public repository.
+Select a processing run and an event, save the capture to the archive, and
+export an HTML report. The files in examples contain synthetic data.
+https://github.com/afrfuniverse/gpocasebook/tree/main/examples
+
+The optional Domain scan feature uses authorized Windows accounts to read
+Active Directory, Windows Event Log, and Computer RSoP. Use the current Windows
+identity or the Windows Run as prompt. A test domain is needed for live remote
+collection. Local capture and imports are available independently.
+
+The MSIX declares runFullTrust so the desktop process can call the Windows
+Event Log and directory services APIs and launch gpresult. All reads use the
+Windows permissions of the selected account. The package runs at medium
+integrity.

@@ -2,7 +2,9 @@
 
 GPOCasebook is a free, local-first Windows workbench for investigating Group Policy failures, comparing before-and-after captures, and exporting evidence that can be reviewed offline.
 
-![GPOCasebook timeline](docs/images/timeline.png)
+**[Install free from Microsoft Store](https://apps.microsoft.com/detail/9N6D294Z5PMZ)** · [Build from source](#run-from-source) · [Watch the quick demo](https://youtu.be/UiXlY1ROzfM)
+
+![GPOCasebook timeline with sample Group Policy events](docs/images/timeline.png)
 
 ## Screenshots
 
@@ -71,7 +73,7 @@ The default shareable HTML export removes named computers, named policies, and r
 
 ## Packaged builds
 
-The source tree is the release source of truth. Build outputs such as .exe, .msix, and temporary verification folders are intentionally kept out of the main branch. Attach reviewed binaries to a GitHub Release when a version is ready, or use the Microsoft Store package workflow in [store/README.md](store/README.md).
+The [Microsoft Store listing](https://apps.microsoft.com/detail/9N6D294Z5PMZ) is the install channel for the published app. Build outputs such as .exe, .msix, and temporary verification folders are kept out of the source tree. The package workflow is documented in [store/README.md](store/README.md).
 
 ## License
 
